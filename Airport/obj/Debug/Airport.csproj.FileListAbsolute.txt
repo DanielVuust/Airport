@@ -1,0 +1,10 @@
+C:\Users\davu\source\repos\Skole\H2\Airport\Airport\bin\Debug\Airport.exe.config
+C:\Users\davu\source\repos\Skole\H2\Airport\Airport\bin\Debug\Airport.exe
+C:\Users\davu\source\repos\Skole\H2\Airport\Airport\bin\Debug\Airport.pdb
+C:\Users\davu\source\repos\Skole\H2\Airport\Airport\bin\Debug\EntityFramework.dll
+C:\Users\davu\source\repos\Skole\H2\Airport\Airport\bin\Debug\EntityFramework.xml
+C:\Users\davu\source\repos\Skole\H2\Airport\Airport\obj\Debug\Airport.csproj.AssemblyReference.cache
+C:\Users\davu\source\repos\Skole\H2\Airport\Airport\obj\Debug\Airport.csproj.CoreCompileInputs.cache
+C:\Users\davu\source\repos\Skole\H2\Airport\Airport\obj\Debug\Airport.csproj.CopyComplete
+C:\Users\davu\source\repos\Skole\H2\Airport\Airport\obj\Debug\Airport.exe
+C:\Users\davu\source\repos\Skole\H2\Airport\Airport\obj\Debug\Airport.pdb

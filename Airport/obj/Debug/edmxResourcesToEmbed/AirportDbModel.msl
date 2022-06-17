@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AirportDbModelStoreContainer" CdmEntityContainer="AirportDbEntities1">
+    <EntitySetMapping Name="AirPorts">
+      <EntityTypeMapping TypeName="AirportDbModel.AirPort">
+        <MappingFragment StoreEntitySet="AirPort">
+          <ScalarProperty Name="IATA" ColumnName="IATA" />
+          <ScalarProperty Name="AirportName" ColumnName="AirportName" />
+          <ScalarProperty Name="AirportAddress" ColumnName="AirportAddress" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Companies">
+      <EntityTypeMapping TypeName="AirportDbModel.Company">
+        <MappingFragment StoreEntitySet="Company">
+          <ScalarProperty Name="CompanyId" ColumnName="CompanyId" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Planes">
+      <EntityTypeMapping TypeName="AirportDbModel.Plane">
+        <MappingFragment StoreEntitySet="Plane">
+          <ScalarProperty Name="SerialNum" ColumnName="SerialNum" />
+          <ScalarProperty Name="Company_CompanyId" ColumnName="Company_CompanyId" />
+          <ScalarProperty Name="Route_RouteId" ColumnName="Route_RouteId" />
+          <ScalarProperty Name="Airport_IATA" ColumnName="Airport_IATA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Routes">
+      <EntityTypeMapping TypeName="AirportDbModel.Route">
+        <MappingFragment StoreEntitySet="Route">
+          <ScalarProperty Name="RouteId" ColumnName="RouteId" />
+          <ScalarProperty Name="Company_CompanyId" ColumnName="Company_CompanyId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Airport_Route">
+      <EntityTypeMapping TypeName="AirportDbModel.Airport_Route">
+        <MappingFragment StoreEntitySet="Airport_Route">
+          <ScalarProperty Name="Airport_StartIATA" ColumnName="Airport_StartIATA" />
+          <ScalarProperty Name="Airport_EndIATA" ColumnName="Airport_EndIATA" />
+          <ScalarProperty Name="Route_RouteId" ColumnName="Route_RouteId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="CreateNewAirport" FunctionName="AirportDbModel.Store.CreateNewAirport" />
+    <FunctionImportMapping FunctionImportName="CreateNewCompany" FunctionName="AirportDbModel.Store.CreateNewCompany" />
+    <FunctionImportMapping FunctionImportName="CreateRouteAndAssignOwner" FunctionName="AirportDbModel.Store.CreateRouteAndAssignOwner">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AirportDbModel.CreateRouteAndAssignOwner_Result">
+          <ScalarProperty Name="CompanyId" ColumnName="CompanyId" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>
